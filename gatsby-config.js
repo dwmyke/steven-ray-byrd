@@ -1,9 +1,26 @@
 module.exports = {
+    siteMetadata: {
+        title: "Steven Ray Byrd",
+        titleTemplate: "%s | Steven Ray Byrd",
+        description:
+          "Steven Ray Byrd - Actor for hire in Albuquerque and Santa Fe, New Mexico.",
+        url: "https://localhost:8000", // No trailing slash allowed!
+        image: "/images/banner.jpg", // Path to your image you placed in the 'static' folder
+        author: "Steven Ray Byrd",
+      },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify-cms`,
+    {
+        resolve: "gatsby-source-filesystem",
+        options: {
+          name: "images",
+          path: "./src/images/",
+        },
+        __key: "images",
+      },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -26,5 +43,6 @@ module.exports = {
       },
     },
     "@chakra-ui/gatsby-plugin",
+    "gatsby-plugin-react-helmet",
   ],
 };

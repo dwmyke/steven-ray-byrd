@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Box, Text } from "@chakra-ui/react"
+import SEO from "../components/seo"
 
 /* // styles
 const pageStyles = {
@@ -101,9 +102,13 @@ const links = [
 const IndexPage = () => {
   return (
     
+    
+
 <Box bg="blue" width="100%" color="white" p={8}>
+<SEO title="Home" />
       <Text fontSize="xl">Um hi.</Text>
     </Box>
+    
 /*     <main style={pageStyles}>
       <title>Home Page</title>
       <h1 style={headingStyles}>
