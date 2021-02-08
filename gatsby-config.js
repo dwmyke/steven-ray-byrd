@@ -37,11 +37,24 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
+        "resolve": `gatsby-source-filesystem`,
+        "options": {
+          "name": `projects`,
+          "path": `${__dirname}/projects`
+        }
       },
-    },
+      {
+        "resolve": `gatsby-plugin-page-creator`,
+        "options": {
+          "path": `${__dirname}/projects`
+        }
+      },
+      {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+          extensions: [`.mdx`, `.md`],
+        },
+      },
     "@chakra-ui/gatsby-plugin",
     "gatsby-plugin-react-helmet",
   ],
