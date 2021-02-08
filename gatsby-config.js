@@ -36,7 +36,7 @@ module.exports = {
         display: `standalone`,
       },
     },
-    {
+/*     {
         "resolve": `gatsby-source-filesystem`,
         "options": {
           "name": `projects`,
@@ -48,7 +48,7 @@ module.exports = {
         "options": {
           "path": `${__dirname}/projects`
         }
-      },
+      }, */
       {
         resolve: `gatsby-plugin-mdx`,
         options: {
